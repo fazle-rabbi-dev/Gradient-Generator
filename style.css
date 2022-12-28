@@ -1,0 +1,176 @@
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans&family=Prosto+One&display=swap');
+
+/*
+font-family: 'Open Sans', sans-serif;
+font-family: 'Prosto One', cursive;
+*/
+
+:root {
+  --opensans: 'Open Sans', sans-serif;
+  --prosto: 'Prosto One', cursive;
+}
+
+
+*{
+   margin: 0;
+   padding: 0;
+   box-sizing: border-box;
+}
+
+html{
+   scroll-behavior: smooth;
+}
+
+body{
+   background: whitesmoke;
+   display: flex;
+   flex-direction: column;
+   justify-content: space-between;
+   align-items: space-between;
+   align-content: space-between;
+   height: 100vh;
+   width: 100%;
+   /* background: red; */
+}
+
+.gradient-image{
+   background-image: linear-gradient(to right, #784beb, purple);
+}
+
+.header{
+   /* background: #714beb; */
+   color: white;
+   padding: 10px;
+   font-family: var(--prosto);
+   text-align: center;
+}
+
+.copy-box{
+   background: #b571e4;
+   /* background: #780856; */
+   color: white;
+   padding: 10px;
+   border-radius: 7px;
+   margin: 20px;
+   font-family: var(--opensans);
+   font-size: 15px;
+   text-align: center;
+   /* opacity: 0; */
+   display: none;
+   transition: 1s;
+}
+
+.about{
+   margin: 20px;
+   color: #292171;
+   font-size: 20px;
+   text-align: center;
+}
+
+.about p{
+   font-weight: 300;
+   /* font-family: var(--opensans); */
+   font-family: Sans-Serif;
+   line-height: 34px;
+}
+
+.container{
+   margin: 15px;
+   background: white;
+   box-shadow: -25px 6px 162px -28px rgba(0,0,0,0.39);
+   padding: 7px;
+   border-radius: 5px;
+}
+
+.container .color-box{
+   display: flex;
+   justify-content: space-between;
+   align-items: center;
+   margin: 5px 0;
+}
+
+.color-box input{
+   background: #222;
+   color: white;
+   font-family: var(--opensans);
+   padding: 8px;
+   width: 70px;
+   border: none;
+   outline: 0;
+}
+
+.color-box .btn{
+   background: none;
+   border: 2px solid #784beb;
+   border-radius: 6px;
+   height: 40px;
+   padding: 0 7px;
+   color: #222;
+   font-family: var(--opensans);
+}
+
+.btn:hover{
+   background: linear-gradient(purple,#784beb);
+   color: white;
+   border: none;
+}
+
+.container .gradient-box{
+   height: 600px;
+   width: 100%;
+   /* background: linear-gradient(to right,#784beb,purple); */
+}
+
+.footer{
+   height: 60px;
+   color: white;
+   padding: 7px;
+   font-family: var(--prosto);   
+   display: flex;
+   justify-content: center;
+   align-items: center;
+}
+
+.link{
+   color: white;
+}
+
+.heart{
+   animation: blink 4s linear infinite;
+   position: relative;
+}
+
+@keyframes blink {
+  0%{
+     font-size: 1rem;
+     /* left: -5px; */
+  }
+  50%{
+     font-size: 1.2rem;
+     /* right: -5px; */
+  }
+  100%{
+     font-size: 1rem;
+     /* left: 5px; */
+  }
+}
+
+
+/* Responsive */
+@media only screen and (min-width: 768px) {
+  
+  .container{
+     margin: 10%;
+  }
+  
+  .container .gradient-box{
+     height: 1000px;
+  }
+  
+  .about{
+     margin: 10%;
+  }
+  
+}
+
+
