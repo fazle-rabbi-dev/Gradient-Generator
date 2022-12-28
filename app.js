@@ -7,8 +7,27 @@ copy_box = document.querySelector(".copy-box");
 
 const colors = ['a','b','c','d','e','f','0','1','2','3','4','5','6','7','8','9'];
 
+function shuffle(array) {
+  let currentIndex = array.length,  randomIndex;
+
+  // While there remain elements to shuffle.
+  while (currentIndex != 0) {
+
+    // Pick a remaining element.
+    randomIndex = Math.floor(Math.random() * currentIndex);
+    currentIndex--;
+
+    // And swap it with the current element.
+    [array[currentIndex], array[randomIndex]] = [
+      array[randomIndex], array[currentIndex]];
+  }
+
+  return array;
+}
 
 function generateColor(){
+   // shuffle(colors)
+   console.log(colors)
    let color1 = '#';
    for(i=1;i<=6;i++){
       const randomNumber = Math.abs(Math.floor(Math.random(1)*colors.length));
@@ -18,7 +37,7 @@ function generateColor(){
    let color2 = '#';
    for(i=1;i<=6;i++){
       const randomNumber = Math.abs(Math.floor(Math.random(1)*colors.length));
-      color2 += colors[randomNumber];
+      color2 += colors.reverse()[randomNumber];
    }
    
    return {
